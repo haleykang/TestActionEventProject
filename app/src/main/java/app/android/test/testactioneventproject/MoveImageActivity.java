@@ -27,15 +27,14 @@ public class MoveImageActivity extends AppCompatActivity implements View.OnTouch
     private int yPoint = 0;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_image);
 
-        this.linearLayout = (LinearLayout)this.findViewById(R.id.moveImageLayout);
-        this.imageView = (ImageView)this.findViewById(R.id.moveImageView);
-        this.textView = (TextView)this.findViewById(R.id.textView);
+        this.linearLayout = (LinearLayout) this.findViewById(R.id.moveImageLayout);
+        this.imageView = (ImageView) this.findViewById(R.id.moveImageView);
+        this.textView = (TextView) this.findViewById(R.id.textView);
 
         this.linearLayout.setOnTouchListener(this);
 
@@ -66,8 +65,8 @@ public class MoveImageActivity extends AppCompatActivity implements View.OnTouch
 
         //Toast.makeText(this,"무브무브",Toast.LENGTH_SHORT).show();
         // 그림 중앙에 넣기 위해 이    미지 크기만큼 좌표 빼봄
-        float fxPoint = motionEvent.getX()-50;
-        float fyPoint = motionEvent.getY()-50;
+        float fxPoint = motionEvent.getX() - 50;
+        float fyPoint = motionEvent.getY() - 50;
 
         // 실수 데이터를 객체로 변환
         // 굳이 객체로 안하고 정수 값으로 바꿔도 될듯..
@@ -89,12 +88,11 @@ public class MoveImageActivity extends AppCompatActivity implements View.OnTouch
             // ACTION_DOWN 다음에 ACTION_UP 이나 ACTION_MOVE가 와야 할 듯
             case MotionEvent.ACTION_DOWN:
                 // Toast.makeText(this,"다운다운",Toast.LENGTH_SHORT).show();
-                Toast.makeText(this,"**터치 좌표**\nx좌표 : " + xPoint + "\ny좌표 : " + yPoint,
+                Toast.makeText(this, "**터치 좌표**\nx좌표 : " + xPoint + "\ny좌표 : " + yPoint,
                         Toast.LENGTH_SHORT).show();
-            case MotionEvent.ACTION_UP :
+            case MotionEvent.ACTION_UP:
                 // Toast.makeText(this,"업업",Toast.LENGTH_SHORT).show();
-            case MotionEvent.ACTION_MOVE:
-           {
+            case MotionEvent.ACTION_MOVE: {
                /*/Toast.makeText(this,"무브무브",Toast.LENGTH_SHORT).show();
                // 그림 중앙에 넣기 위해 이    미지 크기만큼 좌표 빼봄
                float fxPoint = motionEvent.getX()-100;
@@ -118,10 +116,10 @@ public class MoveImageActivity extends AppCompatActivity implements View.OnTouch
                */
 
 
-               imageView.setX(fxPoint);
-               imageView.setY(fyPoint);
-           }
-           break;
+                imageView.setX(fxPoint);
+                imageView.setY(fyPoint);
+            }
+            break;
         }
 
 

@@ -124,8 +124,8 @@ public class DatePickUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date_pick_up);
 
-        this.textView = (TextView)findViewById(R.id.dateTextView);
-        this.changeBt = (Button)findViewById(R.id.dateChangeBt);
+        this.textView = (TextView) findViewById(R.id.dateTextView);
+        this.changeBt = (Button) findViewById(R.id.dateChangeBt);
 
         // 사용자가 버튼을 클릭하는 경우에는 화면네 날짜 창을 출력
         this.changeBt.setOnClickListener(new View.OnClickListener() {
@@ -133,7 +133,7 @@ public class DatePickUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 datePickerDialog =
                         new DatePickerDialog(DatePickUpActivity.this,
-                                dateSetListener, year,month,day);
+                                dateSetListener, year, month, day);
 
                 // show() 함수를 실행해서 날짜 창을 출력하기
                 datePickerDialog.show();
